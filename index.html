@@ -1,1 +1,278 @@
-hello
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>AssistList</title>
+  <link rel='stylesheet' type='text/css' href='slate/dist/css/slate.min.css'>
+  <script src='slate/dist/js/slate.min.js'></script>
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <style>
+  .title {
+    padding: 15px 10px;
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #888888;
+    text-align: center;
+  }
+  </style>
+  </head>
+
+  <body>
+    <h1 class='title'>AssistList</h1>
+<!--
+    <div class="item-container">
+      <div class="button-container">
+        <input type="button" class="item-button" value="Clear this shit" id="clear_button">
+      </div>
+    </div>
+-->
+    <div id="category_add_div">
+        <div class="item-container">
+          <div class="item-container-header">New category name</div>
+          <div class="item-container-content">
+            <label class="item">
+              <div class="item-input-wrapper">
+                <input type="text" class="item-input" name="new_category_name" placeholder="Memes" id="new_category_name_input">
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="item-container">
+          <div class="button-container">
+            <input type="button" class="item-button" value="Add Category" id="add_category_button">
+          </div>
+        </div>
+    </div>
+
+    <div class="item-container" align="center">
+      <h2 class="title">Categories</h2>
+  </div>
+
+    <div class="item-container" id="category_1">
+      <div class="item-container-header" id="category_header_1">Category 1</div>
+      <div class="item-container-content">
+        <label class="item">
+          <div class="item-input-wrapper">
+            <input type="text" class="item-input" id="input-1-1" placeholder="1.">
+            <input type="text" class="item-input" id="input-1-2" placeholder="2.">
+            <input type="text" class="item-input" id="input-1-3" placeholder="3.">
+            <input type="text" class="item-input" id="input-1-4" placeholder="4.">
+            <input type="text" class="item-input" id="input-1-5" placeholder="5.">
+            <input type="text" class="item-input" id="input-1-6" placeholder="6.">
+            <input type="text" class="item-input" id="input-1-7" placeholder="7.">
+          </div>
+        </label>
+      </div>
+      <div class='item-container'>
+        <div class='button-container'>
+          <input id='delete_button_1' type='button' class='item-button' value='Delete this category'>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-container" id="category_2" hidden>
+      <div class="item-container-header" id="category_header_2">Category 2</div>
+      <div class="item-container-content">
+        <label class="item">
+          <div class="item-input-wrapper">
+            <input type="text" class="item-input" id="input-2-1" placeholder="1.">
+            <input type="text" class="item-input" id="input-2-2" placeholder="2.">
+            <input type="text" class="item-input" id="input-2-3" placeholder="3.">
+            <input type="text" class="item-input" id="input-2-4" placeholder="4.">
+            <input type="text" class="item-input" id="input-2-5" placeholder="5.">
+            <input type="text" class="item-input" id="input-2-6" placeholder="6.">
+            <input type="text" class="item-input" id="input-2-7" placeholder="7.">
+          </div>
+        </label>
+      </div>
+      <div class='item-container'>
+        <div class='button-container'>
+          <input id='delete_button_2' type='button' class='item-button' value='Delete this category'>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-container" id="category_3" hidden>
+      <div class="item-container-header" id="category_header_3">Category 3</div>
+      <div class="item-container-content">
+        <label class="item">
+          <div class="item-input-wrapper">
+            <input type="text" class="item-input" id="input-3-1" placeholder="1.">
+            <input type="text" class="item-input" id="input-3-2" placeholder="2.">
+            <input type="text" class="item-input" id="input-3-3" placeholder="3.">
+            <input type="text" class="item-input" id="input-3-4" placeholder="4.">
+            <input type="text" class="item-input" id="input-3-5" placeholder="5.">
+            <input type="text" class="item-input" id="input-3-6" placeholder="6.">
+            <input type="text" class="item-input" id="input-3-7" placeholder="7.">
+          </div>
+        </label>
+      </div>
+      <div class='item-container'>
+        <div class='button-container'>
+          <input id='delete_button_3' type='button' class='item-button' value='Delete this category'>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-container" id="category_4" hidden>
+      <div class="item-container-header" id="category_header_4">Category 4</div>
+      <div class="item-container-content">
+        <label class="item">
+          <div class="item-input-wrapper">
+            <input type="text" class="item-input" id="input-4-1" placeholder="1.">
+            <input type="text" class="item-input" id="input-4-2" placeholder="2.">
+            <input type="text" class="item-input" id="input-4-3" placeholder="3.">
+            <input type="text" class="item-input" id="input-4-4" placeholder="4.">
+            <input type="text" class="item-input" id="input-4-5" placeholder="5.">
+            <input type="text" class="item-input" id="input-4-6" placeholder="6.">
+            <input type="text" class="item-input" id="input-4-7" placeholder="7.">
+          </div>
+        </label>
+      </div>
+      <div class='item-container'>
+        <div class='button-container'>
+          <input id='delete_button_4' type='button' class='item-button' value='Delete this category'>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-container" id="category_5">
+      <div class="item-container-header" id="category_header_5">Category 5</div>
+      <div class="item-container-content">
+        <label class="item">
+          <div class="item-input-wrapper">
+            <input type="text" class="item-input" id="input-5-1" placeholder="1.">
+            <input type="text" class="item-input" id="input-5-2" placeholder="2.">
+            <input type="text" class="item-input" id="input-5-3" placeholder="3.">
+            <input type="text" class="item-input" id="input-5-4" placeholder="4.">
+            <input type="text" class="item-input" id="input-5-5" placeholder="5.">
+            <input type="text" class="item-input" id="input-5-6" placeholder="6.">
+            <input type="text" class="item-input" id="input-5-7" placeholder="7.">
+          </div>
+        </label>
+      </div>
+      <div class='item-container'>
+        <div class='button-container'>
+          <input id='delete_button_5' type='button' class='item-button' value='Delete this category'>
+        </div>
+      </div>
+    </div>
+
+    <div class='item-container'>
+      <div class='button-container'>
+        <input id='submit_button' type='button' class='item-button' value='Save'>
+      </div>
+    </div>
+  </body>
+  <script>
+  function getConfigData() {
+    var backgroundColorPicker = document.getElementById('background_color_picker');
+    var highContrastCheckbox = document.getElementById('high_contrast_checkbox');
+
+    var options = {
+      'background_color': backgroundColorPicker.value,
+      'high_contrast': highContrastCheckbox.checked
+    };
+    // Save for next launch
+    localStorage['background_color'] = options['background_color'];
+    localStorage['high_contrast'] = options['high_contrast'];
+    console.log('Got options: ' + JSON.stringify(options));
+    return options;
+  }
+  function getQueryParam(variable, defaultValue) {
+    var query = location.search.substring(1);
+    var vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
+      var pair = vars[i].split('=');
+      if (pair[0] === variable) {
+        return decodeURIComponent(pair[1]);
+      }
+    }
+    return defaultValue || false;
+  }
+
+  var submitButton = document.getElementById('submit_button');
+  submitButton.addEventListener('click', function() {
+    console.log('Submit');
+    for(var i = 1; i < 6; i++){
+        for(var i1 = 1; i1 < 8; i1++){
+            var id = "input-" + i + "-" + i1;
+            localStorage[id] = document.getElementById(id).value;
+        }
+    }
+    return;
+    var return_to = getQueryParam('return_to', 'pebblejs://close#');
+    document.location = return_to + encodeURIComponent(JSON.stringify(getConfigData()));
+  });
+
+  var debugButton = document.getElementById("clear_button");
+  debugButton.addEventListener('click', function(){
+     localStorage.clear();
+     console.log("Cleared!");
+  });
+
+  var addCategoryButton = document.getElementById('add_category_button');
+  addCategoryButton.addEventListener('click', function(){
+      console.log("Add one");
+      var amount_of_categories = localStorage['category_count'];
+      if(amount_of_categories == 5){
+          window.alert("Maximum amount of categories reached, sorry :(");
+          console.log("Categories " + amount_of_categories);
+          return;
+      }
+      if(amount_of_categories == undefined){
+          amount_of_categories = 0;
+      }
+      amount_of_categories++;
+      localStorage['category_count'] = amount_of_categories;
+
+      var title = document.getElementById("new_category_name_input").value;
+      console.log("Got title: " + title + ". Count of " + amount_of_categories);
+      localStorage['category_title_' + amount_of_categories] = title;
+
+      var div = document.getElementById("category_" + amount_of_categories);
+      div.style.display = 'inline';
+
+      var divTitle = document.getElementById("category_header_" + amount_of_categories);
+      divTitle.innerHTML = title;
+
+      localStorage['category_header_' + amount_of_categories] = title;
+  });
+
+  (function() {
+    var backgroundColorPicker = document.getElementById('background_color_picker');
+    var highContrastCheckbox = document.getElementById('high_contrast_checkbox');
+    // Load any previously saved configuration, if available
+    if(localStorage['high_contrast']) {
+      highContrastCheckbox.checked = JSON.parse(localStorage['high_contrast']);
+      backgroundColorPicker.value = localStorage['background_color'];
+    }
+  })();
+  </script>
+  <script>
+    $( document ).ready(function() {
+        console.log("Ready!");
+        var amount_of_categories = localStorage['category_count'];
+        if(amount_of_categories == undefined){
+            amount_of_categories = 0;
+        }
+        for(var i = amount_of_categories+1; i < 6; i++){
+            var div = document.getElementById("category_" + i);
+            div.style.display = "none";
+        }
+        for(var i = 1; i < amount_of_categories+1; i++){
+            var div = document.getElementById("category_" + i);
+            div.style.display = "inline";
+        }
+        for(var i = 1; i < 6; i++){
+            for(var i1 = 1; i1 < 8; i1++){
+                var id = "input-" + i + "-" + i1;
+                if(document.getElementById(id).value != undefined){
+                    document.getElementById(id).value = localStorage[id];
+                }
+            }
+        }
+    });
+  </script>
+</html>
